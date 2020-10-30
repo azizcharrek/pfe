@@ -1,0 +1,96 @@
+.submenu:hover{
+    background-color: #265EB1;
+    color: white;
+}
+.companyName{
+    font-size: 150%;
+}
+
+.mat-toolbar{
+  height: 7vh;
+  background-color: #9f0915 !important;
+}
+
+div {
+    overflow: inherit;
+}
+
+.mat-sidenav-container{
+   
+  min-height: 93vh !important;
+}
+
+a{
+    text-decoration: none;
+    font-size: 110%;
+    white-space: normal;
+}
+a:hover{
+    background-color: #cccccc !important;
+}
+
+button{
+    font-size: 110%;
+    min-width: min-content;
+}
+
+.example-icon {
+    padding: 0 14px;
+  }
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .mat-sidenav-content{
+      font-size: 200%;
+      text-align: center;
+  }
+  .mat-drawer-inner-container {
+    width: 150px !important;
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.mainmenu{
+    color: white;
+    font-family: 'Questrial';
+    font-size: 18px;
+    width: 100%;
+    text-transform: none;
+}
+
+.mainmenu:hover{
+    color: black;
+    background-color: #265eb1;
+}
+.submenu{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: .8em;
+}
+.main{
+    font-family: 'Questrial';
+    font-size: 18px;
+}
+.main:hover{
+    color: white;
+    background-color: #9f0915 !important;
+}
+.companyName:hover{
+    color: white;
+    background-color: #9f0915 !important;
+}
+.hamburger:hover{
+    color: white;
+    background-color: #9f0915 !important;
+}
+.hamburger:visited{
+    color: white;
+    background-color: black !important;
+}
+.mat-drawer{
+    background-color: #a7a6a6 !important;
+    width: 150px !important;
+}

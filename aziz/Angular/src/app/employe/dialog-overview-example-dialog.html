@@ -1,0 +1,44 @@
+<form (onSubmit)="onSave()">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+          <input class="form-control" type="text" [(ngModel)]="data.prenom" name="prenom" placeholder="first name">
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <input class="form-control" type="text" [(ngModel)]="data.nom" name="nom" placeholder="first name">
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <input class="form-control" type="text" [(ngModel)]="data.Email" name="Email" placeholder="first name">
+  </div>
+  <div class="col-md-6 col-sm-12">
+    <input class="form-control" type="text" [(ngModel)]="data.cin" name="cin" placeholder="first name">
+</div>
+<div class="col-md-6 col-sm-12">
+  <input class="form-control" type="text" [(ngModel)]="data.adress" name="adress" placeholder="first name">
+</div>
+<div class="col-md-6 col-sm-12">
+  <input class="form-control" type="text" [(ngModel)]="data.type" name="type" placeholder="first name">
+</div>
+<div class="col-md-6 col-sm-12">
+  <input class="form-control" type="text" [(ngModel)]="data.departement" name="departement" placeholder="first name">
+</div>
+<div class="col-md-6 col-sm-12">
+  <input class="form-control" type="text" [(ngModel)]="data.specialite" name="specialite" placeholder="first name">
+</div>
+<td class="tbl1">
+
+  <img [src]="data.imageUrl" style="width:250px;height:200px">
+  <input type="file" #Image accept="image/*" 
+    (change)="handleFileInput($event.target.files)">
+
+</td>
+     
+    </div>
+  </div>
+
+  <div>
+    <button mat-raised-button (click)="onNoClick()">close</button>
+    <button mat-raised-button color="primary" type="submit" (click)="onSave()">Save</button>
+  </div>
+
+</form>

@@ -1,0 +1,29 @@
+<form>
+    <table class="table" >  
+        <tr ngclass="btn-primary">  
+          <th class="tbl2">titre</th>  
+          <th class="tbl2">specialite</th>  
+          <th class="tbl2">description</th>  
+          <th class="tbl2">duree</th>  
+          <th class="tbl2">certification</th>  
+          <th class="tbl2">prix</th>  
+          <th class="tbl2">Edit</th>  
+          <th class="tbl2">Delete</th>  
+        </tr>  
+        <tr *ngFor="let Formation of allFormations | async">  
+          <td class="tbl2">{{Formation.titre}}</td>  
+          <td class="tbl2">{{Formation. specialite }}</td>  
+          <td class="tbl2">{{Formation.description}}</td>  
+          <td class="tbl2">{{Formation.duree}}</td>  
+          <td class="tbl2">{{Formation.certification}}</td>  
+          <td class="tbl2">{{Formation.prix}}</td>  
+          <td class="tbl2">  
+            <button type="button" class="btn btn-info"matTooltip="Click Edit Button"(click)="loadFormationToEdit(Formation.id_form)">Edit</button>  
+          </td>  
+          <td class="tbl2">  
+            <button type="button" class="btn btn-danger"matTooltip="Click Delete Button"(click)="deleteFormation(Formation.id_form)">Delete</button>  
+          </td>  
+        </tr>  
+
+      </table>  
+</form>

@@ -1,0 +1,242 @@
+<div class="container">
+
+  <mat-card>
+    <mat-toolbar color="accent">
+      <div align="center" style="color:white;text-align: right;">
+        Employees
+      </div>
+    </mat-toolbar>
+    <br><br>
+    <mat-card-content>
+      <form [formGroup]="employeeForm" (ngSubmit)="onFormSubmit(employeeForm.value)">
+        <table>
+          <tr>
+            <td class="tbl1">
+              <mat-form-field class="demo-full-width">
+                <input formControlName="nom" matTooltip="Enter Employee nom" matInput placeholder="Employee nom">
+              </mat-form-field>
+              <mat-error>
+                <span *ngIf="!employeeForm.get('nom').value && employeeForm.get('nom').touched"></span>
+              </mat-error>
+            </td>
+            <td class="tbl1">
+              <mat-form-field class="demo-full-width">
+                <input formControlName="prenom" matTooltip="Enter Employee prenom" matInput
+                  placeholder="Employee prenom">
+              </mat-form-field>
+              <mat-error>
+                <span *ngIf="!employeeForm.get('prenom').value && employeeForm.get('prenom').touched"></span>
+              </mat-error>
+            </td>
+            <td class="tbl1">
+              <mat-form-field class="demo-full-width">
+                <input formControlName="Email" matTooltip="Enter Email" matInput placeholder="Email">
+              </mat-form-field>
+              <mat-error>
+                <span *ngIf="!employeeForm.get('Email').value && employeeForm.get('Email').touched"></span>
+              </mat-error>
+            </td>
+            <td class="tbl1">
+              <mat-form-field class="demo-full-width">
+                <input formControlName="cin"  matInput placeholder="cin">
+              </mat-form-field>
+              <mat-error>
+                <span *ngIf="!employeeForm.get('cin').value && employeeForm.get('cin').touched"></span>
+              </mat-error>
+            </td>
+            <td class="tbl1">
+              <mat-form-field class="demo-full-width">
+                <input matTooltip="Enter adress" formControlName="adress" matInput placeholder="adress">
+              </mat-form-field>
+              <mat-error>
+                <span *ngIf="!employeeForm.get('adress').value && employeeForm.get('adress').touched"></span>
+              </mat-error>
+            </td>
+          <tr>
+            <td class="tbl1">
+              <mat-form-field class="demo-full-width">
+                <input matInput [matDatepicker]="picker" matTooltip="Enter Date Of Birth"
+                  formControlName="date_de_naissance" placeholder="Choose Date Of Birth">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+              <mat-error>
+                <span
+                  *ngIf="!employeeForm.get('date_de_naissance').value && employeeForm.get('date_de_naissance').touched"></span>
+              </mat-error>
+              <!--  </td> 
+                  <td class="tbl1">
+                  <input type="file" (change)="onFileChanged($event)">
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-success">Uplode</button>
+                  </div>
+                  <img [src]="imgURL" height="200" *ngIf="imgURL"> 
+                </td>
+                -->
+            <td class="tbl1">
+              <mat-form-field class="demo-full-width">
+                <input matTooltip="departement" formControlName="departement" matInput placeholder="departement">
+              </mat-form-field>
+              <mat-error>
+                <span *ngIf="!employeeForm.get('departement').value && employeeForm.get('departement').touched"></span>
+              </mat-error>
+            </td>
+            <td class="tbl1">
+              <mat-form-field class="demo-full-width">
+                <input matTooltip="specialite" formControlName="specialite" matInput placeholder="specialite">
+              </mat-form-field>
+              <mat-error>
+                <span *ngIf="!employeeForm.get('specialite').value && employeeForm.get('specialite').touched"></span>
+              </mat-error>
+            </td>
+            <!--   <td class="tbl1">  
+                    <mat-form-field class="demo-full-width">  
+                      <input matTooltip="formation"formControlName="formation" matInput placeholder="formation">  
+                    </mat-form-field>  
+                    <mat-error>  
+                      <span *ngIf="!employeeForm.get('formation').value && employeeForm.get('formation').touched"></span>  
+                    </mat-error>  
+                  </td>   -->
+            <td class="tbl1">
+              <mat-form-field class="demo-full-width">
+                <input matTooltip="type" formControlName="type" matInput placeholder="type">
+              </mat-form-field>
+              <mat-error>
+                <span *ngIf="!employeeForm.get('type').value && employeeForm.get('type').touched"></span>
+              </mat-error>
+            </td>
+
+          </tr>
+
+          <td class="tbl1">
+
+            <img [src]="imageUrl" style="width:250px;height:200px">
+            <input type="file" #Image accept="image/*" formControlName="Image"
+              (change)="handleFileInput($event.target.files)">
+
+          </td>
+          
+          <tr class="tbl1">
+            <!--   <td class="tbl1">  
+        
+                    <select name="type"  (change)="BindType($event.target.value)" class="form-control">  
+                        <option value="undefined">Select type </option>  
+                        <option *ngFor="let type of types){  
+                          " [value]="employee.type">  
+                            {{employeeForm.type}}  
+                        </option>  
+                    </select>  
+                     
+                  
+                
+                  </td> -->
+            <!--  </td>  
+                  <td class="tbl1">  
+                    <span>Formateur</span>  
+                    <br><br>  
+                    <mat-radio-group matTooltip="Enter type"formControlName="type">  
+                        <mat-radio-button value="0">oui</mat-radio-button>    
+                        <mat-radio-button value="1">non</mat-radio-button>  
+                      </mat-radio-group>  
+                    <mat-error>  
+                      <span *ngIf="!employeeForm.get('forma').value && employeeForm.get('forma').touched"></span>  
+                    </mat-error>  
+                  </td>   -->
+
+
+
+            <td></td>
+            <td class="content-center">
+              <button type="submit" mat-raised-button color="accent" matTooltip="Click Submit Button"
+                [disabled]="!employeeForm.valid" (click)="OnSubmit"> Submit</button>
+              <button type="reset" mat-raised-button color="accent" matTooltip="Click Reset Button"
+                (click)="resetForm()">Reset</button>
+            </td>
+            <td>
+              <p *ngIf="dataSaved" style="color:rgb(0, 128, 0);font-size:20px;font-weight:bold" Class="success"
+                align="left">
+                {{massage}}
+              </p>
+            </td>
+          </tr>
+        </table>
+        <br><br>
+        <div *ngIf="!loading">
+          <table class="table">
+            <tr ngclass="btn-primary">
+              <th class="tbl2">Nom</th>
+              <th class="tbl2">Prenom</th>
+              <th class="tbl2">Email </th>
+              <th class="tbl2">date_de_naissance</th>
+
+              <th class="tbl2">cin</th>
+              <th class="tbl2">adress</th>
+              <th class="tbl2">departement</th>
+              <th class="tbl2">specialite</th>
+              <!--   <th class="tbl2">image</th>  -->
+              <!-- <th class="tbl2">formation</th>  -->
+              <th class="tbl2">type</th>
+              <th class="tbl2">Edit</th>
+              <th class="tbl2">Delete</th>
+            </tr>
+            <tr *ngFor="let employee of allEmployees | paginate :{ itemsPerPage: 5, currentPage:p }">
+              <td class="tbl2">{{employee.nom}}</td>
+              <td class="tbl2">{{employee.prenom}}</td>
+              <td class="tbl2">{{employee.Email}}</td>
+              <td class="tbl2">{{employee. date_de_naissance | date }}</td>
+
+              <td class="tbl2">{{employee.cin}}</td>
+              <td class="tbl2">{{employee.adress}}</td>
+              <td class="tbl2">{{employee.departement}}</td>
+              <td class="tbl2">{{employee.specialite}}</td>
+              <!--  <td class="tbl2">{{employee.image}}</td>  -->
+              <!--   <td class="tbl2">{{employee.formation}}</td>  -->
+              <td class="tbl2">{{employee.type }}</td>
+
+              <td class="tbl2">
+                <button type="button" class="btn btn-info" matTooltip="Click Edit Button"
+                  (click)="edit(employee)">Edit</button>
+              </td>
+              <td class="tbl2">
+                <button type="button" class="btn btn-danger" matTooltip="Click Delete Button"
+                  (click)="deleteEmployee(employee.id_emp)">Delete</button>
+              </td>
+            </tr>
+
+          </table>
+          <pagination-controls (pageChange)="p=$event"></pagination-controls>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div class="container">
+  <div class="row mt-5">
+    <div *ngFor="let employee of allEmployees  | paginate :{ itemsPerPage: 5, currentPage:p2 }" class="col-md-3"
+      style="padding-left: 0 !important; margin-bottom: 20px; margin-right: 15px; border: 1px solid #cccccc; border-radius: 10px; max-width: 200px;">
+      <div>
+        <img src="http://localhost:55840/App_Data/{{employee.image}}" style="max-width: 200px; height: auto;" />
+      </div>
+      <div>
+        <p>
+          {{employee.nom}}
+          {{employee.cin}}
+        </p>
+      </div>
+
+      <div>
+        <a href="" class="btn btn-outline-danger">Click</a>
+      </div>
+
+
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-md-12 col-sm-12">
+      <pagination-controls (pageChange)="p2=$event"></pagination-controls>
+    </div>
+  </div>
+</div>
+
